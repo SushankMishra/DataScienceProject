@@ -1,5 +1,5 @@
 pandas
-mlflow
+mlflow == 2.22.0
 scikit-learn
 numpy
 matplotlib

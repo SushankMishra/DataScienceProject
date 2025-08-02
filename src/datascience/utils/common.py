@@ -6,7 +6,7 @@ import joblib
 from ensure import ensure_annotations
 from box import ConfigBox
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Type
 from box.exceptions import BoxValueError
 
 @ensure_annotations
@@ -48,8 +48,8 @@ def create_directories(path_to_directories: list, verbose = True):
             logger.error(f"Error creating directory {path}: {e}")
             raise e
 
-@ensure_annotations
-def save_json(path: Path, data: dict) -> None:
+
+def save_json(path: Path, data: dict) -> Type[None]:
     """
     Saves a dictionary as a JSON file.
     

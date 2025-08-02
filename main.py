@@ -3,6 +3,7 @@ from src.datascience.pipeline.data_ingestion_pipeline import DataIngestionPipeli
 from src.datascience.pipeline.data_validation_pipeline import DataValidationPipeline
 from src.datascience.pipeline.data_transformation_pipeline import DataTransformationPipeline
 from src.datascience.pipeline.model_training_pipeline import ModelTrainingPipeline
+from src.datascience.pipeline.model_evaluation_pipeline import ModelEvaluationPipeline  
 
 STAGE_NAME = "Data Ingestion stage"
 
@@ -41,11 +42,23 @@ except Exception as e:
 
 STAGE_NAME = "Model Training stage"
 try:
-    logger.info(">>> Starting Model Training Pipeline <<<")
+    logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
     pipeline = ModelTrainingPipeline()
     pipeline.initiate_model_training()
     pipeline.model_training.train_model()
-    logger.info(">>> Model Training Pipeline Completed <<<")
+    logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<")
 except Exception as e:
     logger.exception(e)
+    raise e
+
+STAGE_NAME = "Model Evaluation stage"
+
+try:
+    logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
+    pipeline = ModelEvaluationPipeline()
+    pipeline.initiate_model_evaluation()
+    pipeline.model_evaluation.log_into_mlflow()
+    logger.info("Model evaluation metrics logged into MLflow.")
+    logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<")
+except Exception as e:
     raise e
