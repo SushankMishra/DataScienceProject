@@ -1,1 +1,38 @@
-2025-08-02 12:34:04,317 - INFO - This is a log message from main.py
+2025-08-02 21:13:30,502 - INFO - >>>>>> stage Data Ingestion stage started <<<<<<
+2025-08-02 21:13:30,503 - INFO - YAML file read successfully from config/config.yaml
+2025-08-02 21:13:30,504 - INFO - YAML file read successfully from params.yaml
+2025-08-02 21:13:30,505 - INFO - YAML file read successfully from schema.yaml
+2025-08-02 21:13:30,506 - INFO - Directory created: artifacts
+2025-08-02 21:13:30,506 - INFO - Directory created: artifacts/data_ingestion
+2025-08-02 21:13:31,464 - INFO - >>>>>> stage Data Ingestion stage completed <<<<<<
+2025-08-02 21:13:31,465 - INFO - >>>>>> stage Data Validation stage started <<<<<<
+2025-08-02 21:13:31,466 - INFO - YAML file read successfully from config/config.yaml
+2025-08-02 21:13:31,467 - INFO - YAML file read successfully from params.yaml
+2025-08-02 21:13:31,469 - INFO - YAML file read successfully from schema.yaml
+2025-08-02 21:13:31,469 - INFO - Directory created: artifacts
+2025-08-02 21:13:31,469 - INFO - Directory created: artifacts/data_validation
+2025-08-02 21:13:31,469 - INFO - Data Validation Config Accepted
+2025-08-02 21:13:31,476 - INFO - All columns are valid and match the schema.
+2025-08-02 21:13:31,477 - INFO - >>>>>> stage Data Validation stage completed <<<<<<
+2025-08-02 21:13:31,477 - INFO - >>>>>> stage Data Transformation stage started <<<<<<
+2025-08-02 21:13:31,478 - INFO - YAML file read successfully from config/config.yaml
+2025-08-02 21:13:31,479 - INFO - YAML file read successfully from params.yaml
+2025-08-02 21:13:31,480 - INFO - YAML file read successfully from schema.yaml
+2025-08-02 21:13:31,480 - INFO - Directory created: artifacts
+2025-08-02 21:13:31,480 - INFO - Directory created: artifacts/data_transformation
+2025-08-02 21:13:31,480 - INFO - Data Transformation Config Accepted
+2025-08-02 21:13:31,480 - INFO - Starting train-test split
+2025-08-02 21:13:31,494 - INFO - Train-test split completed and files saved
+2025-08-02 21:13:31,494 - INFO - Train-test split completed
+2025-08-02 21:13:31,494 - INFO - >>>>>> stage Data Transformation stage completed <<<<<<
+2025-08-02 21:13:31,494 - INFO - >>> Starting Model Training Pipeline <<<
+2025-08-02 21:13:31,496 - INFO - YAML file read successfully from config/config.yaml
+2025-08-02 21:13:31,496 - INFO - YAML file read successfully from params.yaml
+2025-08-02 21:13:31,497 - INFO - YAML file read successfully from schema.yaml
+2025-08-02 21:13:31,497 - INFO - Directory created: artifacts
+2025-08-02 21:13:31,497 - INFO - Directory created: artifacts/model_trainer
+2025-08-02 21:13:31,497 - INFO - Model Training Config Accepted
+2025-08-02 21:13:31,497 - INFO - Starting model training
+2025-08-02 21:13:31,500 - INFO - Data loaded successfully
+2025-08-02 21:13:31,504 - INFO - Model training completed
+2025-08-02 21:13:31,505 - INFO - >>> Model Training Pipeline Completed <<<
